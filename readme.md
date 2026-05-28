@@ -1,8 +1,4 @@
-article.html - Статья
-blog.html - Блог
+markdown
 
-https://SFsolovev.github.io/Youtalk_HW/article.html
-https://SFsolovev.github.io/Youtalk_HW/blog.html
-
-[YouTalk](https://SFsolovev.github.io/Youtalk_HW/article.html)
-[YouTalk](https://SFsolovev.github.io/Youtalk_HW/blog.html)
+[article.html - Статья](https://SFsolovev.github.io/Youtalk_HW/article.html)
+[blog.html - Блог](https://SFsolovev.github.io/Youtalk_HW/blog.html)
