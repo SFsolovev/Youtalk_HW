@@ -6,24 +6,24 @@
     <title>YouTalk — Как не утонуть в тревоге</title>
     <link rel="stylesheet" href="./css/main.css">
 </head>
-<body class="page">
-    <header class="header">
-        <div class="container">
-            <nav class="header__navigation">
-                <div class="header__elements">
-                    <img class="header__logo" src="./files/ico1.svg" alt="Логотип">
-                    <ul class="header__menu">
-                        <li class="header__menu-item"><a href="#">О нас</a></li>
-                        <li class="header__menu-item"><a href="#">Тарифы</a></li>
-                        <li class="header__menu-item"><a href="#">Для бизнеса</a></li>
-                        <li class="header__menu-item"><a href="#">Психологам</a></li>
-                        <li class="header__menu-item"><a href="#">Материалы</a></li>
-                        <li class="header__menu-item"><a href="#">FAQ</a></li>
+<body class="app">
+    <header class="topbar">
+        <div class="wrap">
+            <nav class="topbar__nav">
+                <div class="topbar__group">
+                    <img class="topbar__logo" src="./files/ico1.svg" alt="Логотип">
+                    <ul class="topbar__links">
+                        <li class="topbar__links-item"><a href="#">О нас</a></li>
+                        <li class="topbar__links-item"><a href="#">Тарифы</a></li>
+                        <li class="topbar__links-item"><a href="#">Для бизнеса</a></li>
+                        <li class="topbar__links-item"><a href="#">Психологам</a></li>
+                        <li class="topbar__links-item"><a href="#">Материалы</a></li>
+                        <li class="topbar__links-item"><a href="#">FAQ</a></li>
                     </ul>
                 </div>
-                <div class="header__button-container">
-                    <button class="header__button button">Подобрать психолога</button>
-                    <button class="header__menu-button button" aria-label="Меню">
+                <div class="topbar__btns">
+                    <button class="topbar__btn btn">Подобрать психолога</button>
+                    <button class="topbar__burger btn" aria-label="Меню">
                         <img src="./files/ico2.svg" alt="">
                     </button>
                 </div>
@@ -31,31 +31,31 @@
         </div>
     </header>
 
-    <main class="main">
-        <div class="container">
-            <div class="breadcrumbs">
-                <a href="#" class="breadcrumbs__link">Главная</a>
-                <span class="breadcrumbs__separator">&nbsp;>&nbsp;</span>
-                <a href="#" class="breadcrumbs__link">Блог</a>
-                <span class="breadcrumbs__separator">&nbsp;>&nbsp;</span>
-                <a href="#" class="breadcrumbs__link" aria-current="page">Как не утонуть в тревоге и управлять своими страхами</a>
+    <main class="content">
+        <div class="wrap">
+            <div class="path">
+                <a href="#" class="path__link">Главная</a>
+                <span class="path__sep">&nbsp;>&nbsp;</span>
+                <a href="#" class="path__link">Блог</a>
+                <span class="path__sep">&nbsp;>&nbsp;</span>
+                <a href="#" class="path__link" aria-current="page">Как не утонуть в тревоге и управлять своими страхами</a>
             </div>
 
-            <section class="article">
-                <div class="post-data">
-                    <h1 class="post-data__title">Как не утонуть в тревоге и управлять своими страхами</h1>
-                    <div class="post-data__info">
+            <section class="two-columns">
+                <div class="entry">
+                    <h1 class="entry__heading">Как не утонуть в тревоге и управлять своими страхами</h1>
+                    <div class="entry__meta">
                         <span>Автор: Лиза Файнтух</span>
                         <span aria-hidden="true">&nbsp;·&nbsp;</span>
                         <span>21.08.2021</span>
                     </div>
-                    <div class="post-data__image-container">
-                        <img class="post-data__image" src="./files/pic4.png" alt="Девушка сидит на полу">
+                    <div class="entry__fig">
+                        <img class="entry__img" src="./files/pic4.png" alt="Девушка сидит на полу">
                     </div>
 
-                    <div class="post-data__content">
+                    <div class="entry__toc">
                         <h4>Содержание</h4>
-                        <ul class="post-data__list">
+                        <ul class="tree">
                             <li>Как понять, что отношения с мамой были дисфункциональными и привели к травме?</li>
                             <li>Мама привет!
                                 <ul>
@@ -75,102 +75,102 @@
                         </ul>
                     </div>
 
-                    <div class="post-data__article-content">
+                    <div class="entry__body">
                         <h3>Заголовок h3</h3>
                         <p>Один из самых важных навыков... <br><br>Давайте, к примеру, разберем тревогу...</p>
                         
-                        <div class="post-data__quote">
-                            <img class="post-data__quote-marker" src="./files/ico4.svg" alt="">
-                            <p class="post-data__quote-text">Мы знаем, что нуждаться в помощи и поддержке в трудные периоды жизни абсолютно нормально для любого человека, и стремимся сделать психотерапию безопасной, удобной и доступной каждому</p>
+                        <div class="speech">
+                            <img class="speech__icon" src="./files/ico4.svg" alt="">
+                            <p class="speech__text">Мы знаем, что нуждаться в помощи и поддержке в трудные периоды жизни абсолютно нормально для любого человека, и стремимся сделать психотерапию безопасной, удобной и доступной каждому</p>
                             <br>
-                            <p class="post-data__quote-author">Ана Крымская</p>
+                            <p class="speech__author">Ана Крымская</p>
                         </div>
 
                         <h3>Что еще можно делать с тревогой?</h3>
-                        <div class="post-data__list-element">
+                        <div class="entry__list-item">
                             <img src="./files/ico3.svg" alt="">
                             <p>Управлять ей через что-то внешнее...</p>
                         </div>
-                        <div class="post-data__list-element">
+                        <div class="entry__list-item">
                             <img src="./files/ico3.svg" alt="">
                             <p>А еще порой можно разрешить себе тревогу заесть...</p>
                         </div>
 
-                        <div class="post-data__image-container">
-                            <img class="post-data__image" src="./files/pic8.png" alt="Человек в воде">
-                            <p class="post-data__image-description">Онтогенез речи отражает групповой эриксоновский гипноз.</p>
+                        <div class="entry__fig">
+                            <img class="entry__img" src="./files/pic8.png" alt="Человек в воде">
+                            <p class="entry__caption">Онтогенез речи отражает групповой эриксоновский гипноз.</p>
                         </div>
 
                         <p>Чем шире доступный вам репертуар реакций...</p>
 
-                        <div class="post-data__text-with-blop">
-                            <img class="post-data__blop" src="./files/ico5.svg" alt="">
-                            <p class="post-data__blop-text">Мы знаем, что нуждаться в помощи и поддержке в трудные периоды жизни абсолютно нормально для любого человека...</p>
+                        <div class="blob">
+                            <img class="blob__bg" src="./files/ico5.svg" alt="">
+                            <p class="blob__text">Мы знаем, что нуждаться в помощи и поддержке в трудные периоды жизни абсолютно нормально для любого человека...</p>
                         </div>
 
                         <p>Одна из ключевых задач психотерапии...</p>
 
-                        <div class="text-image-block-1">
-                            <img class="text-image-block-1__img" src="./files/pic9.png" alt="Девушка с зонтом">
+                        <div class="flex-img-1">
+                            <img class="flex-img-1__pic" src="./files/pic9.png" alt="Девушка с зонтом">
                             <p>Чем шире доступный вам репертуар реакций...<br>А еще порой можно разрешить себе тревогу заесть чем-то вкусным.</p>
                         </div>
 
                         <p>Чем шире доступный вам репертуар реакций...</p>
 
-                        <div class="post-data__practice" style="background-color: #FEFAEC">
-                            <p class="post-data__practice-header">Упражнение #1</p>
+                        <div class="exercise" style="background-color: #FEFAEC">
+                            <p class="exercise__title">Упражнение #1</p>
                             <br>
                             <p>Нужно последовательно напрягать и расслаблять каждую мышцу...</p>
                         </div>
 
                         <h3>Что еще можно делать с тревогой?</h3>
-                        <div class="post-data__list-element">
+                        <div class="entry__list-item">
                             <img src="./files/ico3.svg" alt="">
                             <p>Управлять ей через что-то внешнее...</p>
                         </div>
-                        <div class="post-data__list-element">
+                        <div class="entry__list-item">
                             <img src="./files/ico3.svg" alt="">
                             <p>А еще порой можно разрешить себе тревогу заесть...</p>
                         </div>
 
-                        <div class="text-image-block-1">
-                            <img class="text-image-block-1__img" src="./files/pic10.png" alt="Девушка в профиль">
+                        <div class="flex-img-1">
+                            <img class="flex-img-1__pic" src="./files/pic10.png" alt="Девушка в профиль">
                             <p>Чем шире доступный вам репертуар реакций...</p>
                         </div>
 
                         <p>Чем шире доступный вам репертуар реакций...</p>
 
-                        <div class="post-data__practice" style="background-color: #FFF3EB">
-                            <p class="post-data__practice-header">Упражнение #2</p>
+                        <div class="exercise" style="background-color: #FFF3EB">
+                            <p class="exercise__title">Упражнение #2</p>
                             <br>
                             <p>Нужно последовательно напрягать и расслаблять каждую мышцу...</p>
                         </div>
 
-                        <div class="text-image-block-2">
+                        <div class="flex-img-2">
                             <div>
-                                <img class="text-image-block-2__img" src="./files/pic11.png" alt="Улица, человек">
-                                <p class="text-image-block-2__text">Чем шире доступный вам репертуар реакций...</p>
+                                <img class="flex-img-2__pic" src="./files/pic11.png" alt="Улица, человек">
+                                <p class="flex-img-2__desc">Чем шире доступный вам репертуар реакций...</p>
                             </div>
                             <div>
-                                <img class="text-image-block-2__img" src="./files/pic12.png" alt="Пляж, волны">
-                                <p class="text-image-block-2__text">Чем шире доступный вам репертуар реакций...</p>
+                                <img class="flex-img-2__pic" src="./files/pic12.png" alt="Пляж, волны">
+                                <p class="flex-img-2__desc">Чем шире доступный вам репертуар реакций...</p>
                             </div>
                         </div>
 
-                        <div class="post-data__hr">
+                        <div class="hr-deco">
                             <img src="./files/ico6.svg" alt="">
                         </div>
 
                         <p>Одна из ключевых задач психотерапии...</p>
 
-                        <div class="post-data__practice" style="background-color: #03B2A51A;">
-                            <p class="post-data__practice-header">Упражнение #1</p>
+                        <div class="exercise" style="background-color: #03B2A51A;">
+                            <p class="exercise__title">Упражнение #1</p>
                             <br>
                             <p>Нужно последовательно напрягать и расслаблять каждую мышцу...</p>
                         </div>
 
-                        <div class="post-data__tag-links">
-                            <nav class="post-data__tag-links-navigation">
+                        <div class="tag-cloud">
+                            <nav class="tag-cloud">
                                 <a href="#">Self</a> <span>·</span>
                                 <a href="#">Самооценка и самопринятие</a> <span>·</span>
                                 <a href="#">Упражнения</a> <span>·</span>
@@ -179,13 +179,13 @@
                             </nav>
                         </div>
 
-                        <hr class="post-data__bottom-hr">
+                        <hr class="entry__bottom-hr">
 
-                        <div class="post-data__bottom-post">
-                            <div class="post-data__bottom-post-text">
-                                <h2 class="post-data__title">Откликается проблема?</h2>
+                        <div class="cta-block">
+                            <div class="cta-block__text">
+                                <h2 class="entry__heading">Откликается проблема?</h2>
                                 <p>Поможем подобрать специалиста по работе с подобным запросом</p>
-                                <button class="header__button button">Подобрать психолога</button>
+                                <button class="topbar__btn btn">Подобрать психолога</button>
                             </div>
                             <div>
                                 <img src="./files/ico7.svg" alt="Люди разговаривают">
@@ -194,54 +194,54 @@
                     </div>
                 </div>
 
-                <aside class="sidebar">
-                    <div class="sidebar__qlick">
+                <aside class="aside">
+                    <div class="aside__card">
                         <img src="./files/ico8.svg" alt="">
                         <p>Загружаем свободные окошки</p>
                         <p>Все в порядке, сейчас мы перенаправим вас в сервис записи Qlick...</p>
-                        <button class="load-more__button button">Подробнее</button>
+                        <button class="more__btn btn">Подробнее</button>
                     </div>
 
-                    <div class="sidebar__psychologist">
-                        <div class="sidebar__tags">
-                            <span class="sidebar__tag">📝️️ Переписка</span>
-                            <span class="sidebar__tag">📹️️ Видео</span>
+                    <div class="aside__psycho">
+                        <div class="aside__labels">
+                            <span class="aside__label">📝️️ Переписка</span>
+                            <span class="aside__label">📹️️ Видео</span>
                         </div>
-                        <img class="sidebar__psychologist-photo" src="./files/pic13.png" alt="Психолог Лилия">
+                        <img class="aside__photo" src="./files/pic13.png" alt="Психолог Лилия">
                         <p>Лилия</p>
                         <p>Психолог</p>
                         <p>Опыт 6 лет · 43 года</p>
-                        <hr class="sidebar__hr">
+                        <hr class="aside__hr">
                         <div>
                             <h3>С чем работает психолог</h3>
-                            <div class="post-data__list-element">
+                            <div class="entry__list-item">
                                 <img src="./files/ico3.svg" alt="">
                                 <p>Тревога, тревожности</p>
                             </div>
-                            <div class="post-data__list-element">
+                            <div class="entry__list-item">
                                 <img src="./files/ico3.svg" alt="">
                                 <p>Подавленность</p>
                             </div>
-                            <div class="post-data__list-element">
+                            <div class="entry__list-item">
                                 <img src="./files/ico3.svg" alt="">
                                 <p>Тревога и панические атаки</p>
                             </div>
                         </div>
-                        <button class="load-more__button button">Подробнее</button>
+                        <button class="more__btn btn">Подробнее</button>
                     </div>
 
-                    <div class="sidebar__care">
-                        <img class="sidebar__care-image" src="./files/pic14.png" alt="Реклама заботы">
+                    <div class="aside__ad">
+                        <img class="aside__ad-img" src="./files/pic14.png" alt="Реклама заботы">
                     </div>
 
-                    <div class="sidebar__sessions">
-                        <h3 class="sidebar__sessions-headtext">8 Видео сессий</h3>
-                        <p class="sidebar__sessions-description">Проработать небольшие проблемы и продвинуться в решении сложных запросов</p>
+                    <div class="aside__offer">
+                        <h3 class="aside__offer-title">8 Видео сессий</h3>
+                        <p class="aside__offer-desc">Проработать небольшие проблемы и продвинуться в решении сложных запросов</p>
                         <div>
-                            <p class="sidebar__sessions-cost">18 500 ₽</p>
-                            <button class="sidebar__sessions-buy">Купить</button>
+                            <p class="aside__price">18 500 ₽</p>
+                            <button class="aside__buy">Купить</button>
                         </div>
-                        <img src="./files/ico9.svg" alt="Подарки" class="sidebar__sessions-gifts">
+                        <img src="./files/ico9.svg" alt="Подарки" class="aside__gift">
                     </div>
                 </aside>
             </section>
@@ -249,40 +249,40 @@
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer__content">
-                <nav class="footer__navigation">
-                    <ul class="footer__menu">
-                        <li class="footer__menu-item"><a href="#">О нас</a></li>
-                        <li class="footer__menu-item"><a href="#">Тарифы</a></li>
-                        <li class="footer__menu-item"><a href="#">Для бизнеса</a></li>
-                        <li class="footer__menu-item"><a href="#">Психологам</a></li>
-                        <li class="footer__menu-item"><a href="#">FAQ</a></li>
-                        <li class="footer__menu-item"><a href="#">Блог</a></li>
-                        <li class="footer__menu-item"><a href="#">Вебинары</a></li>
-                        <li class="footer__menu-item"><a href="#">Подкаст</a></li>
-                        <li class="footer__menu-item"><a href="#">Сертификат</a></li>
-                        <li class="footer__menu-item"><a href="#">Контакты</a></li>
+        <div class="wrap">
+            <div class="footer__row">
+                <nav class="footer__nav">
+                    <ul class="footer__nav">
+                        <li class="footer__nav-item"><a href="#">О нас</a></li>
+                        <li class="footer__nav-item"><a href="#">Тарифы</a></li>
+                        <li class="footer__nav-item"><a href="#">Для бизнеса</a></li>
+                        <li class="footer__nav-item"><a href="#">Психологам</a></li>
+                        <li class="footer__nav-item"><a href="#">FAQ</a></li>
+                        <li class="footer__nav-item"><a href="#">Блог</a></li>
+                        <li class="footer__nav-item"><a href="#">Вебинары</a></li>
+                        <li class="footer__nav-item"><a href="#">Подкаст</a></li>
+                        <li class="footer__nav-item"><a href="#">Сертификат</a></li>
+                        <li class="footer__nav-item"><a href="#">Контакты</a></li>
                     </ul>
                 </nav>
-                <div class="footer__mail">
-                    <p class="footer__mail-text">Одно письмо в неделю со свежими новостями и акциями</p>
-                    <div class="footer__mail-input">
-                        <input class="footer__mail-field" type="email" placeholder="Ваш e-mail" aria-label="Email для подписки">
-                        <button class="footer__mail-button button" aria-label="Подписаться"></button>
+                <div class="footer__subscribe">
+                    <p class="footer__subscribe-text">Одно письмо в неделю со свежими новостями и акциями</p>
+                    <div class="footer__form">
+                        <input class="footer__input" type="email" placeholder="Ваш e-mail" aria-label="Email для подписки">
+                        <button class="footer__send btn" aria-label="Подписаться"></button>
                     </div>
-                    <p class="footer__mail-policy">Подписываясь, я соглашаюсь на обработку персональных данных в соответствии с ФЗ РФ № 152-ФЗ «О персональных данных», а также с Политикой конфиденциальности</p>
+                    <p class="footer__policy">Подписываясь, я соглашаюсь на обработку персональных данных в соответствии с ФЗ РФ № 152-ФЗ «О персональных данных», а также с Политикой конфиденциальности</p>
                 </div>
                 <div class="footer__social">
-                    <div class="footer__social-skolkovo">
-                        <img class="footer__social-skolkovo-img" src="./files/ico10.svg" alt="Сколково">
-                        <p class="footer__social-skolkovo-text">Участник</p>
+                    <div class="footer__skolkovo">
+                        <img class="footer__sk-img" src="./files/ico10.svg" alt="Сколково">
+                        <p class="footer__sk-text">Участник</p>
                     </div>
-                    <div class="footer__social-icons">
-                        <img class="footer__social-icon" src="./files/ico11.svg" alt="VK">
-                        <img class="footer__social-icon" src="./files/ico12.svg" alt="Telegram">
-                        <img class="footer__social-icon" src="./files/ico13.svg" alt="Twitter X">
-                        <img class="footer__social-icon" src="./files/ico14.svg" alt="Яндекс Дзен">
+                    <div class="footer__icons">
+                        <img class="footer__icon" src="./files/ico11.svg" alt="VK">
+                        <img class="footer__icon" src="./files/ico12.svg" alt="Telegram">
+                        <img class="footer__icon" src="./files/ico13.svg" alt="Twitter X">
+                        <img class="footer__icon" src="./files/ico14.svg" alt="Яндекс Дзен">
                     </div>
                 </div>
             </div>

@@ -11,14 +11,14 @@
 
 body { min-width: 320px; }
 
-.page {
+.app {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-.header { padding: 20px 0; }
-.main { flex: 1; padding-bottom: 50px; }
+.topbar { padding: 20px 0; }
+.content { flex: 1; padding-bottom: 50px; }
 
 a {
     text-decoration: none;
@@ -32,39 +32,39 @@ hr {
 }
 
 /* УТИЛИТЫ */
-.container { margin: 0 5vw; }
-.button {
+.wrap { margin: 0 5vw; }
+.btn {
     cursor: pointer;
     transition: opacity 0.2s;
 }
-.button:hover,
-.button:focus {
+.btn:hover,
+.btn:focus {
     opacity: 0.8;
     outline: 2px solid #03B2A5;
     outline-offset: 2px;
 }
 
-/* HEADER */
-.header__navigation {
+/* HEADER (НОВОЕ ИМЯ) */
+.topbar__nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.header__elements {
+.topbar__group {
     display: flex;
     align-items: center;
 }
-.header__logo { margin-right: 20px; }
-.header__menu {
+.topbar__logo { margin-right: 20px; }
+.topbar__links {
     display: flex;
     list-style: none;
     gap: 1vw;
     text-wrap: nowrap;
 }
-.header__menu-item a { font-size: 16px; }
-.header__button-container { display: inline-block; }
-.header__button,
-.header__menu-button {
+.topbar__links-item a { font-size: 16px; }
+.topbar__btns { display: inline-block; }
+.topbar__btn,
+.topbar__burger {
     background-color: #E3F5F5;
     color: #03B2A5;
     border: 0;
@@ -74,38 +74,38 @@ hr {
     font-size: 16px;
     text-wrap: nowrap;
 }
-.header__menu-button {
+.topbar__burger {
     display: none;
     background: transparent;
 }
-.header__button img,
-.header__menu-button img {
+.topbar__btn img,
+.topbar__burger img {
     vertical-align: middle;
     margin-right: 5px;
 }
 
 /* ХЛЕБНЫЕ КРОШКИ */
-.breadcrumbs {
+.path {
     margin-bottom: 10px;
     opacity: 70%;
     color: #333;
 }
-.breadcrumbs__link,
-.breadcrumbs__separator { font-size: 14px; }
+.path__link,
+.path__sep { font-size: 14px; }
 
 /* ФИЛЬТР БЛОГА */
-.main__title {
+.page-title {
     margin-top: 40px;
     margin-bottom: 20px;
 }
-.filter {
+.toolbar {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 20px;
     white-space: nowrap;
 }
-.filter__button {
+.toolbar__chip {
     padding: 6px 8px;
     border: 1px solid #C1C5CD;
     background: white;
@@ -115,15 +115,15 @@ hr {
     font-size: 14px;
     cursor: pointer;
 }
-.filter__button--selected { border: 2px solid #16C8BB; }
+.toolbar__chip--active { border: 2px solid #16C8BB; }
 
 /* СЕТКА КАРТОЧЕК */
-.posts {
+.grid {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
 }
-.post {
+.card {
     position: relative;
     width: calc(33.33% - 10px);
     border: 1px solid #C1C5CD;
@@ -132,10 +132,10 @@ hr {
     display: flex;
     flex-direction: column;
 }
-.post:nth-child(-n+2) { width: calc(50% - 7.5px); }
-.post__link { display: block; }
-.post__link:hover .post__title { text-decoration: underline; }
-.post__tags {
+.card:nth-child(-n+2) { width: calc(50% - 7.5px); }
+.card__link { display: block; }
+.card__link:hover .card__title { text-decoration: underline; }
+.card__badges {
     position: absolute;
     top: 14px;
     left: 14px;
@@ -143,7 +143,7 @@ hr {
     flex-direction: column;
     gap: 8px;
 }
-.post__tag {
+.card__badge {
     width: min-content;
     padding: 6px 8px;
     background: #fff;
@@ -153,31 +153,31 @@ hr {
     font-size: 14px;
     white-space: nowrap;
 }
-.post__image {
+.card__img {
     width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: 16px 16px 0 0;
 }
-.post__content {
+.card__body {
     margin: 14px;
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
-.post__title { font-weight: 700; font-size: 18px; }
-.post__author {
+.card__title { font-weight: 700; font-size: 18px; }
+.card__author {
     font-weight: 400;
     font-size: 12px;
     color: #494949;
 }
-.post__text {
+.card__desc {
     font-weight: 400;
     font-size: 14px;
     color: #333;
     margin-bottom: 25px;
 }
-.post__date {
+.card__date {
     position: absolute;
     bottom: 14px;
     left: 14px;
@@ -186,12 +186,12 @@ hr {
 }
 
 /* КНОПКА "ЕЩЕ" */
-.load-more {
+.more {
     margin: 30px 0;
     display: flex;
     justify-content: center;
 }
-.load-more__button {
+.more__btn {
     width: 182px;
     height: 48px;
     background: #35B3A9;
@@ -202,19 +202,19 @@ hr {
     cursor: pointer;
 }
 
-/* FOOTER */
+/* FOOTER (ОСТАВЛЮ .footer, НО МОЖНО ИЗМЕНИТЬ) */
 .footer {
     background: #2963A3;
     color: white;
     padding: 15px 0;
 }
-.footer__content {
+.footer__row {
     display: flex;
     flex-wrap: wrap;
     gap: 5vw;
     margin-top: 20px;
 }
-.footer__menu {
+.footer__nav {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px 15px;
@@ -222,33 +222,33 @@ hr {
     font-size: 16px;
     list-style: none;
 }
-.footer__mail {
+.footer__subscribe {
     flex: 1;
     font-weight: 700;
     font-size: 18px;
 }
-.footer__mail-text { margin-bottom: 10px; }
-.footer__mail-input {
+.footer__subscribe-text { margin-bottom: 10px; }
+.footer__form {
     display: flex;
     border: 1px solid #e0e0e0;
     border-radius: 3px;
     overflow: hidden;
 }
-.footer__mail-field {
+.footer__input {
     flex: 1;
     border: none;
     padding: 10px;
     font-size: 16px;
     outline: none;
 }
-.footer__mail-button {
+.footer__send {
     background: #24c9bb;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
 }
-.footer__mail-button::after { content: url("../files/ico15.svg"); }
-.footer__mail-policy {
+.footer__send::after { content: url("../files/ico15.svg"); }
+.footer__policy {
     margin-top: 10px;
     font-size: 14px;
     font-weight: 400;
@@ -258,13 +258,13 @@ hr {
     flex-direction: column;
     gap: 20px;
 }
-.footer__social-skolkovo {
+.footer__skolkovo {
     display: flex;
     align-items: center;
     gap: 5px;
 }
-.footer__social-skolkovo-text { font-weight: 700; font-size: 20px; }
-.footer__social-icons {
+.footer__sk-text { font-weight: 700; font-size: 20px; }
+.footer__icons {
     display: flex;
     gap: 10px;
 }
@@ -283,57 +283,58 @@ hr {
 /* ПЕРЕМЕННЫЕ ДЛЯ СТАТЬИ */
 :root { --max-width: 50vw; }
 
-/* СТРАНИЦА СТАТЬИ */
-.article {
+/* СТРАНИЦА СТАТЬИ (НОВЫЕ ИМЕНА) */
+.two-columns {
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
 }
-.post-data {
+.entry {
     display: flex;
     flex-direction: column;
     gap: 20px;
     max-width: var(--max-width);
 }
-.post-data__title {
+.entry__heading {
     color: #333;
     font-weight: 700;
     font-size: 48px;
 }
-.post-data__info {
+.entry__meta {
     display: flex;
     gap: 4px;
     font-size: 14px;
     color: #494949;
 }
-.post-data__image-container { max-width: var(--max-width); }
-.post-data__image {
+.entry__fig { max-width: var(--max-width); }
+.entry__img {
     width: 100%;
     height: 450px;
     object-fit: cover;
 }
-.post-data__image-description {
+.entry__caption {
     margin-top: 20px;
     font-size: 14px;
     color: #868686;
 }
-.post-data__content {
+.entry__toc {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
+.entry__toc-title { font-weight: 700; }
 
 /* Списки */
-.post-data__list {
+.tree {
     list-style: none;
     padding-left: 0;
 }
-.post-data__list li {
+.tree li {
     margin-left: 20px;
     position: relative;
     padding-left: 20px;
 }
-.post-data__list li::before {
+.tree li::before {
     content: "";
     position: absolute;
     left: 0;
@@ -343,96 +344,96 @@ hr {
     background-image: url("../files/ico3.svg");
     background-size: contain;
 }
-.post-data__list ul { margin-left: 20px; }
+.tree ul { margin-left: 20px; }
 
-.post-data__article-content { display: flex; flex-direction: column; gap: 30px; }
-.post-data__quote {
+.entry__body { display: flex; flex-direction: column; gap: 30px; }
+.speech {
     position: relative;
     padding: 24px;
     border-radius: 16px;
     background: #F3F7FE;
 }
-.post-data__quote-marker {
+.speech__icon {
     position: absolute;
     top: 24px;
     left: 24px;
 }
-.post-data__quote-text {
+.speech__text {
     margin-left: 40px;
     font-style: italic;
 }
-.post-data__quote-author {
+.speech__author {
     margin-left: 40px;
     font-weight: 700;
 }
-.post-data__text-with-blop {
+.blob {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 200px;
 }
-.post-data__blop {
+.blob__bg {
     position: absolute;
     z-index: -1;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.post-data__blop-text {
+.blob__text {
     max-width: 500px;
     font-style: italic;
 }
-.post-data__practice {
+.exercise {
     padding: 24px;
     border-radius: 16px;
 }
-.post-data__practice-header { font-weight: 700; }
-.text-image-block-1 {
+.exercise__title { font-weight: 700; }
+.flex-img-1 {
     display: flex;
     gap: 20px;
 }
-.text-image-block-1__img { max-width: 40%; height: auto; }
-.text-image-block-2 {
+.flex-img-1__pic { max-width: 40%; height: auto; }
+.flex-img-2 {
     display: flex;
     gap: 20px;
 }
-.text-image-block-2__img { max-width: 100%; height: auto; }
-.text-image-block-2__text { margin-top: 15px; }
-.post-data__tag-links nav a { color: #2963A3; }
-.post-data__tag-links-navigation {
+.flex-img-2__pic { max-width: 100%; height: auto; }
+.flex-img-2__desc { margin-top: 15px; }
+.tag-cloud {
     display: flex;
     flex-wrap: wrap;
     gap: 0 10px;
 }
-.post-data__bottom-post {
+.tag-cloud a { color: #2963A3; }
+.cta-block {
     display: flex;
     gap: 10vw;
     width: 95vw;
 }
-.post-data__bottom-post-text {
+.cta-block__text {
     display: flex;
     flex-direction: column;
     gap: 40px;
     max-width: 30vw;
 }
-.post-data__hr { display: flex; justify-content: center; }
+.hr-deco { display: flex; justify-content: center; }
 
-/* SIDEBAR */
-.sidebar {
+/* SIDEBAR (НОВЫЕ ИМЕНА) */
+.aside {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
 }
-.sidebar__qlick {
+.aside__card {
     width: 25vw;
     padding: 24px;
     border-radius: 24px;
     background: #E6F0FD;
     text-align: center;
 }
-.sidebar__psychologist {
+.aside__psycho {
     position: relative;
     width: 25vw;
     padding: 24px;
@@ -440,7 +441,7 @@ hr {
     background: #EFF5FB;
     text-align: center;
 }
-.sidebar__tags {
+.aside__labels {
     position: absolute;
     top: 14px;
     left: 14px;
@@ -448,7 +449,7 @@ hr {
     flex-direction: column;
     gap: 8px;
 }
-.sidebar__tag {
+.aside__label {
     width: min-content;
     padding: 6px 8px;
     background: #F3F4F8;
@@ -457,12 +458,12 @@ hr {
     font-size: 14px;
     white-space: nowrap;
 }
-.sidebar__psychologist-photo { width: 70%; height: auto; }
-.sidebar__care {
+.aside__photo { width: 70%; height: auto; }
+.aside__ad {
     width: 25vw;
 }
-.sidebar__care-image { width: 100%; height: auto; }
-.sidebar__sessions {
+.aside__ad img { width: 100%; height: auto; }
+.aside__offer {
     position: relative;
     width: 25vw;
     padding: 24px;
@@ -470,22 +471,22 @@ hr {
     border: 1px solid #DEDEDE;
     box-shadow: 0px 30px 50px 0px #EFF5FB;
 }
-.sidebar__sessions-headtext {
+.aside__offer-title {
     font-size: 18px;
     font-weight: 700;
     color: #2963A3;
 }
-.sidebar__sessions-description {
+.aside__offer-desc {
     font-size: 14px;
     line-height: 20px;
     color: #011632;
 }
-.sidebar__sessions-cost {
+.aside__price {
     font-size: 24px;
     font-weight: 700;
     margin: 16px 0;
 }
-.sidebar__sessions-buy {
+.aside__buy {
     background: #4db6ac;
     color: white;
     border: none;
@@ -494,7 +495,7 @@ hr {
     font-weight: 700;
     cursor: pointer;
 }
-.sidebar__sessions-gifts {
+.aside__gift {
     position: absolute;
     bottom: 16px;
     right: 16px;
@@ -503,42 +504,42 @@ hr {
 
 /* АДАПТИВНОСТЬ */
 @media (max-width: 1024px) {
-    .post-data__tag-links, .post-data__bottom-post, .post-data__bottom-hr { display: none; }
+    .tag-cloud, .cta-block, .entry__bottom-hr { display: none; }
 }
 @media (max-width: 960px) {
-    .article { flex-direction: column; }
-    .post-data { margin-bottom: 20px; }
-    .text-image-block-1, .text-image-block-2 { flex-direction: column; }
-    .text-image-block-1__img, .text-image-block-2__img { max-width: 100%; }
-    .sidebar {
+    .two-columns { flex-direction: column; }
+    .entry { margin-bottom: 20px; }
+    .flex-img-1, .flex-img-2 { flex-direction: column; }
+    .flex-img-1__pic, .flex-img-2__pic { max-width: 100%; }
+    .aside {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-    .sidebar__qlick,
-    .sidebar__psychologist,
-    .sidebar__care,
-    .sidebar__sessions {
+    .aside__card,
+    .aside__psycho,
+    .aside__ad,
+    .aside__offer {
         width: 100%;
         height: 100%;
     }
 }
 @media (max-width: 768px) {
-    .header__menu { display: none; }
-    .header__button { display: none; }
-    .header__menu-button {
+    .topbar__links { display: none; }
+    .topbar__btn { display: none; }
+    .topbar__burger {
         display: inline-block;
         width: 51px;
         height: 51px;
         padding: 0;
     }
-    .filter {
+    .toolbar {
         flex-wrap: nowrap;
         overflow-x: auto;
     }
-    .posts { justify-content: center; }
-    .post,
-    .post:nth-child(-n+2) { width: 100%; }
+    .grid { justify-content: center; }
+    .card,
+    .card:nth-child(-n+2) { width: 100%; }
 }
 @media (max-width: 610px) {
-    .sidebar { grid-template-columns: 1fr; }
+    .aside { grid-template-columns: 1fr; }
 }
